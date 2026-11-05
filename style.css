@@ -1,0 +1,231 @@
+ 
+        /* Basic Reset */
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        }
+        
+        body { 
+            font-family: Arial, sans-serif; 
+            background-color: #f8f9fa; 
+            color: #212529; 
+            line-height: 1.6;
+        }
+
+        /* 1. Header Section (Flexbox) */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #0c0d0d;
+            padding: 1rem 5%;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .logo { 
+            font-size: 1.5rem; 
+            font-weight: bold; 
+        }
+        
+        .nav-links { 
+            display: flex; 
+            gap: 1.5rem; 
+        }
+        
+        .nav-links a { 
+            color: white; 
+            text-decoration: none; 
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover { 
+            color: #ff6b6b; 
+        }
+
+        /* 2. Hero Section (Flexbox)[cite: 2] */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 4rem 5%;
+            background-color: white;
+            gap: 2rem;
+        }
+        
+        .hero-content { 
+            flex: 1; 
+        }
+        
+        .hero-content h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero-image { 
+            flex: 1; 
+            display: flex; 
+            justify-content: center; 
+        }
+        
+        .hero-image img { 
+            width: 220px; 
+            height: 220px; 
+            border-radius: 50%; 
+            object-fit: cover; 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        /* Highlight Text Animation[cite: 4] */
+        @keyframes colorChange {
+            0% { color: #ff6b6b; }
+            50% { color: #ffa502; }
+            100% { color: #ff6b6b; }
+        }
+        
+        .highlight { 
+            animation: colorChange 4s infinite; 
+        }
+
+        /* 3. About Section[cite: 2] */
+        .about-section { 
+            padding: 3rem 5%; 
+            text-align: center; 
+            background-color: #f8f9fa;
+        }
+        
+        .about-section h2, 
+        .skills-section h2, 
+        .projects-section h2, 
+        .contact-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #0b5ed7;
+        }
+        
+        .about-section p { 
+            max-width: 700px; 
+            margin: 0 auto; 
+            font-size: 1.1rem;
+        }
+
+        /* 4. Skills & 5. Projects Sections (CSS Grid)[cite: 2] */
+        .skills-section, .projects-section { 
+            padding: 3rem 5%; 
+            text-align: center; 
+            background-color: #fff; 
+        }
+        
+        .skills-grid, .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .skill-card, .project-card {
+            background-color: #0b5ed7;
+            color: white;
+            padding: 2rem;
+            border-radius: 6px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .project-card {
+            background-color: #f8f9fa;
+            color: #212529;
+            border: 1px solid #dee2e6;
+        }
+        
+        .skill-card:hover, .project-card:hover { 
+            transform: translateY(-5px); 
+        }
+
+        /* 6. Contact Form Section[cite: 2] */
+        .contact-section { 
+            padding: 3rem 5%; 
+            text-align: center; 
+            background-color: #f8f9fa;
+        }
+        
+        .contact-form {
+            max-width: 450px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .contact-form input, 
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        
+        .contact-form input:focus, 
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: #0b5ed7;
+        }
+        
+        .contact-form button {
+            padding: 0.8rem;
+            background-color: #0b5ed7;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .contact-form button:hover {
+            background-color: #0948a7;
+        }
+
+        /* 7. Footer Section[cite: 3, 4] */
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #080808;
+            color: white;
+            padding: 1.2rem 5%;
+        }
+        
+        .back-to-top { 
+            color: white; 
+            text-decoration: none; 
+            font-weight: 600;
+        }
+        
+        .back-to-top:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Media Queries (Mobile & Tablet)[cite: 1, 4] */
+        @media (max-width: 768px) {
+            .hero { 
+                flex-direction: column-reverse; 
+                text-align: center; 
+            }
+            .header { 
+                flex-direction: column; 
+                gap: 1rem; 
+            }
+            .footer { 
+                flex-direction: column; 
+                gap: 0.8rem; 
+                text-align: center; 
+            }
+        }
+    
