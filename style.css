@@ -1,5 +1,5 @@
  
-        /* Basic Reset */
+       
         * { 
             margin: 0; 
             padding: 0; 
@@ -13,7 +13,7 @@
             line-height: 1.6;
         }
 
-        /* 1. Header Section (Flexbox) */
+        
         .header {
             display: flex;
             justify-content: space-between;
@@ -47,7 +47,7 @@
             color: #ff6b6b; 
         }
 
-        /* 2. Hero Section (Flexbox)[cite: 2] */
+       
         .hero {
             display: flex;
             align-items: center;
@@ -80,7 +80,7 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
 
-        /* Highlight Text Animation[cite: 4] */
+       
         @keyframes colorChange {
             0% { color: #ff6b6b; }
             50% { color: #ffa502; }
@@ -91,7 +91,7 @@
             animation: colorChange 4s infinite; 
         }
 
-        /* 3. About Section[cite: 2] */
+       
         .about-section { 
             padding: 3rem 5%; 
             text-align: center; 
@@ -113,7 +113,7 @@
             font-size: 1.1rem;
         }
 
-        /* 4. Skills & 5. Projects Sections (CSS Grid)[cite: 2] */
+       
         .skills-section, .projects-section { 
             padding: 3rem 5%; 
             text-align: center; 
@@ -192,7 +192,7 @@
             background-color: #0948a7;
         }
 
-        /* 7. Footer Section[cite: 3, 4] */
+       
         .footer {
             display: flex;
             justify-content: space-between;
@@ -212,7 +212,7 @@
             text-decoration: underline;
         }
 
-        /* Responsive Media Queries (Mobile & Tablet)[cite: 1, 4] */
+        
         @media (max-width: 768px) {
             .hero { 
                 flex-direction: column-reverse; 
