@@ -1,4 +1,4 @@
-# Web Dev I - Lab Assignment 1: Responsive Personal Portfolio Website
+# Web Dev I - Lab Assignment 3 Responsive Personal Portfolio Website
 
 ## Lab Description
 This project is an advanced, responsive single-page personal portfolio website built using modern CSS features. It features a structured layout covering a Header, Hero, About, Skills, Projects, Contact, and Footer section[cite: 2].
